@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -16,37 +16,57 @@
   </head>
   <body>
     <div>
-      <nav>
-        <div>
-          <img class="logo" src="img/Logo.svg" />
-        </div>
-        <div class="navigation">
-          <div class="menu">
-            <a href="#">Demos</a>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a class="menu-last-el" href="#">Contact</a>
-          </div>
-          <div class="buttons-log">
-            <div class="button-login">
-              <a class="button-login-edit" href="#">Login</a>
-            </div>
-            <div class="button-sign-up">
-              <button>Sign up</button>
-            </div>
+      <header>
+        <div class="header-inner">
+          <a href="#">
+            <img class="logo" src="img/Logo.svg" />
+          </a>
+          <nav class="navigation">
+            <ul class="menu">
+              <li><a href="#">Demos</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="buttons-container">
+            <a href="#" class="button-login">Login</a>
+            <button class="button-sign-up">Sign up</button>
           </div>
         </div>
-      </nav>
-      <div class="main-container">
-        <h1 class="main-text">A collaborative Time Tracking that you Need</h1>
-        <h2 class="last-text">
-          <p>An enim nullam tempor sapien gravida donec enim ipsum porta</p>
-          <p>justo congue magna at pretium purus pretium ligula</p>
-        </h2>
-        <div class="button-start-container">
-          <button class="button-start">Start 14 Days Trial</button>
-        </div>
+      </header>
+      <!-- <div class="line-clock">
+        <img src="img/line.svg" alt="line" />
       </div>
+      <div class="img-clock">
+        <img src="img/Alarm_Clock copy 2.svg" alt="Clock" />
+      </div> -->
+      <!-- <div class="img-line-right">
+        <img src="img/line-right.png" alt="line-right" />
+      </div> -->
+      <section
+        class="hero-section"
+        style="background-image: url('/img/Group.png')"
+      >
+        <div class="hero-section-inner">
+          <div class="underline-img">
+            <img src="img/text-line.svg" alt="underline text" />
+          </div>
+          <h1 class="title-text">
+            A collaborative Time Tracking that you Need
+          </h1>
+          <h2 class="basic-text">
+            <p>An enim nullam tempor sapien gravida donec enim ipsum porta</p>
+            <p>justo congue magna at pretium purus pretium ligula</p>
+          </h2>
+          <div class="button-start-container">
+            <button class="button-start">Start 14 Days Trial</button>
+          </div>
+          <!-- <div class="mobile-screen1">
+          <img src="img/Mobile Screen 1.svg" alt="Mobile Screen" />
+        </div> -->
+        </div>
+      </section>
     </div>
   </body>
 </html>

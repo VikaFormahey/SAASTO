@@ -1,165 +1,45 @@
-/* REESET */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-HTML5 display-role reset for older browsers article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* STYLE */
-
 body {
   background-color: #fff8f2;
   width: 100%;
-  height: 3000px; /* change, been "auto"*/
+  height: 1126px;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
-nav {
+header {
   color: #1c0e0d;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
 
   /* FIXED NAV */
 
   position: fixed;
-  background-color: #fff8f2;
+  top: 0;
+  left: 0;
   padding-bottom: 10px;
+  z-index: 5;
+}
+
+.header-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   color: #18063c;
   width: 178.57px;
   height: 40px;
-  margin-right: 211.43px;
-  margin-left: 375.5px;
-  margin-top: 50px;
   display: block;
 }
 
 .menu {
   display: flex;
   gap: 48px;
-  margin-right: 48px;
   font-size: 18px;
 }
 
@@ -176,19 +56,14 @@ nav {
 .menu a:hover {
   color: #ff553e;
   transition: color 0.3s ease;
-  text-decoration: underline;
 }
 
 .navigation {
-  width: 780px;
-  height: 60px;
-  margin-top: 40px;
-  margin-right: 375px;
   display: flex;
   align-items: center;
 }
 
-.buttons-log {
+.buttons-container {
   display: flex;
   gap: 36px;
 }
@@ -199,14 +74,11 @@ nav {
   justify-content: center;
   font-size: 18px;
   font-weight: 500;
-}
-
-.button-login-edit {
   color: #ff553e;
   text-decoration: none;
 }
 
-.button-sign-up button {
+.button-sign-up {
   justify-content: center;
   width: 133px;
   height: 60px;
@@ -218,30 +90,70 @@ nav {
   font-weight: 500;
 }
 
-.main-container {
-  margin-top: 238px;
-  width: 800px;
-  height: 420px;
-  margin-top: 320px;
-  margin-left: 560px;
-  margin-left: 560px;
-  margin-right: 560px;
+.hero-section {
+  min-height: 100dvh;
+  background-image: url("/img/Group.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+
+  /* POSISION */
+
+  position: relative;
 }
 
-.main-text {
+.hero-section-inner {
+  max-width: 800px;
+  margin-top: 320px;
+  margin-bottom: 368px;
+  position: relative;
+}
+
+.hero-section-inner::before,
+.hero-section-inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-section-inner::before {
+  height: 157px;
+  width: 135px;
+  top: -80px;
+  left: -159px;
+  background-image: url("/img/clock.svg");
+}
+
+.hero-section-inner::after {
+  height: 191px;
+  width: 178px;
+  bottom: -19px;
+  right: -67px;
+  background-image: url("/img/list-img.png");
+}
+
+.title-text {
   font-family: "Poppins", sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 90px;
   text-align: center;
   align-items: center;
-  /* text-underline-position: from-font; */
-  text-decoration-skip-ink: none;
   color: #1c0e0d;
   margin-bottom: 24px;
+
+  /* POSITION */
+
+  z-index: 2;
+  position: relative;
 }
 
-.last-text {
+.basic-text {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -269,3 +181,36 @@ nav {
   line-height: 28px;
   color: #ffffff;
 }
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4000;
+  transition: color 0.3s ease;
+}
+
+/* IMG */
+
+/* .img-clock {
+  position: absolute;
+  margin-top: 228px;
+  left: 374px;
+  z-index: 1;
+} */
+
+.underline-img {
+  position: absolute;
+  margin-top: 145px;
+  margin-left: 8px;
+  z-index: 1;
+}
+
+/* .mobile-screen1 {
+  position: absolute;
+
+  z-index: 2;
+  width: 337.74px;
+  height: 679.8px;
+} */
